@@ -1,0 +1,2 @@
+[flake8]
+exclude = .git, venv, static, migrations, settings.py,

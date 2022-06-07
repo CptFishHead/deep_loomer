@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block maincontent %}
+    <div class="d-flex justify-content-center align-items-center" style="background-color: gray">
+        {% for printer in printers %}
+            <p>{{ printer.name }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

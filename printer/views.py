@@ -1,5 +1,11 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-# Create your views here.
+from printer.models import Printer
+
+
 def index(request):
-    return HttpResponse("Здесь будет выведен список обновлений")
+    context = {}
+    printers = Printer.objects.all()
+    context.update({"printers": printers})
+    return render(request, "index.html", context)
+
